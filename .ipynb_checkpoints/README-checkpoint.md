@@ -40,13 +40,12 @@ pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+c
 The model is trained using the following datasets:
 - **Reference Genome:** hg38 (https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/)
 - **ESM-C (600M parameters):** Pretrained protein embeddings.
-- **GTEx v10:** Tissue-specific gene expression data.
+- **GTEx v10:** Tissue-specific gene expression data. NOT USING ANYMORE
 - **MAGE_2025_scaled Functional Networks:** Gene interaction and functional association data.
 - **DepMap Public 24Q4:** CRISPR gene dependency data (`CRISPRGeneDependency.csv`).
 - **COSMIC release v101, 19th Nov 2024:** Cancer genes & type data.
-- **CCLE & CCLE-v2 Public data:** Unfiltered VCF files for 777 cell lines (https://app.terra.bio/#workspaces/broad-firecloud-ccle/CCLE-public)
-- **Housekeeping genes:** https://housekeeping.unicamp.br/?download
-- **The Human Protein Atlas:**
+- **CCLE & CCLE-v2 Public data:** Unfiltered VCF files for 777 cell lines (https://app.terra.bio/#workspaces/broad-firecloud-ccle/CCLE-public). NOT USING ANYMORE
+- **The Human Protein Atlas:** for housekeeping genes and tissue-enhanced gene sets.
 
 ## NOTES FOR ME
 - esm env has to be separate
