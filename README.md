@@ -36,7 +36,7 @@ conda install scikit-learn matplotlib pandas -c conda-forge
 pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
 ```
 
-## Data Used for GAT Training
+## Data Used for Mahi
 The model is trained using the following datasets:
 - **Reference Genome:** hg38 (https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/)
 - **ESM-C (600M parameters):** Pretrained protein embeddings.
