@@ -1,0 +1,5 @@
+
+# Ignore Slurm output logs
+slurm_outputs/
+slurm-*.out
+slurm-*.err
