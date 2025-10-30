@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="mahi_logo.png" alt="MAHI Logo" width="500"/>
+  <img src="mahi_logo.png" alt="MAHI Logo" width="350"/>
 </p>
 
-Deep learning framework integrating genomic sequence and tissue-specific gene interactions for functional genomics.
+**Mahi** is a deep learning framework integrating genomic sequence and tissue-specific gene interactions for functional genomics.
+---
+
