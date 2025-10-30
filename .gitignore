@@ -3,3 +3,4 @@
 slurm_outputs/
 slurm-*.out
 slurm-*.err
+resources/.ipynb_checkpoints/gene_essentiality_labels_25Q2-checkpoint.csv
