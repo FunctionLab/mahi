@@ -10,12 +10,12 @@
 ### **Recommended Installation (using 'environment.yaml')**
 ```bash
 # clone GitHub repository
-git clone https://github.com/anushaggs/target_genes.git
-cd target_genes
+git clone https://github.com/FunctionLab/mahi.git
+cd mahi
 
 # create Conda environment from YAML
 conda env create -f environment.yaml
-conda activate target-genes
+conda activate mahi
 
 # install PyTorch Geometric dependencies
 pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
@@ -24,8 +24,8 @@ pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+c
 ### **Manual Installation**
 ```bash
 # create new Conda environment
-conda create --name target-genes python=3.10 pytorch=2.1 torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-conda activate target-genes
+conda create --name mahi python=3.10 pytorch=2.1 torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+conda activate mahi
 
 # install dependencies
 pip install "numpy<2"
@@ -36,7 +36,7 @@ conda install scikit-learn matplotlib pandas -c conda-forge
 pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
 ```
 
-## Data Used for Mahi
+## Data Used for GAT Training
 The model is trained using the following datasets:
 - **Reference Genome:** hg38 (https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/)
 - **ESM-C (600M parameters):** Pretrained protein embeddings.
@@ -55,4 +55,3 @@ The model is trained using the following datasets:
 - transformers[torch] needs to be installed as well
 - xgboost will need to be installed as well
 - joypy need to be pip installed
-
