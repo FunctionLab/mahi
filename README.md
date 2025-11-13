@@ -34,9 +34,12 @@ conda install scikit-learn matplotlib pandas -c conda-forge
 
 # install PyTorch Geometric dependencies
 pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
+
+# install transformers package
+pip install "transformers[torch]"
 ```
 
-## Quickstart (5-minute demo)
+## Demo: gene essentiality prediction
 Please start by downloading the data from the following link & unzip the data: https://drive.google.com/drive/folders/1xWfPkC8bs3aQCsI6YMqYpXnSn6f6E1-B?usp=share_link
 ```bash
 unzip <data>.zip
@@ -57,6 +60,12 @@ python scripts/gene_essentiality/evaluate_mahi_gene_essentiality.py \
   --cell_line ACH-000012                         # comment out this flag to run on all 1,183 cell lines
 ```
 
+## Optional (HPC/SLURM)
+For **much faster runtime on CPUs**, you can also submit the demo as a SLURM job:
+```bash
+sbatch demo.slurm
+```
+
 ### **Outputs**
 ```bash
 outputs/demo/mahi_gene_essentiality_eval/
@@ -66,7 +75,7 @@ outputs/demo/mahi_gene_essentiality_eval/
 ```
 
 ## Mahi: End-to-end
-Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN.
+Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN). Please download the tissue-specific functional network before running Mahi.
 ### **Generate Mahi embeddings**
 ```bash
 python wt_mahi.py \
@@ -97,4 +106,5 @@ python get_top_genes.py \
 ## To-Do
 - [ ] Allow processing for multiple tissues at once (WT Mahi & perturb Mahi)
 - [ ] Add code to generate baseline averages across 200 random global perturbations
+- [ ] Add more information about how to run each Mahi step individually for more control
 
