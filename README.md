@@ -60,7 +60,7 @@ python scripts/gene_essentiality/evaluate_mahi_gene_essentiality.py \
   --cell_line ACH-000012                         # comment out this flag to run on all 1,183 cell lines
 ```
 
-## Optional (HPC/SLURM)
+### Optional (HPC/SLURM)
 For **much faster runtime on CPUs (2 minutes)**, you can also submit the demo as a SLURM job:
 ```bash
 sbatch demo.slurm
