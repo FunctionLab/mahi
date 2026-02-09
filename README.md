@@ -45,7 +45,7 @@ Please start by downloading the data from the following link & unzip the data: h
 unzip <data>.zip
 ```
 
-This demo runs gene essentiality prediction on **one cell line** to verify your set up (**GPU** not needed).
+This demo runs gene essentiality prediction on **one cell line** to verify your set up (takes 15-20 minutes depending on your setup):
 ```bash
 # attach gene essentiality labels to Mahi demo embeddings for lung tissue
 python scripts/gene_essentiality/add_labels.py \
@@ -61,7 +61,7 @@ python scripts/gene_essentiality/evaluate_mahi_gene_essentiality.py \
 ```
 
 ## Optional (HPC/SLURM)
-For **much faster runtime on CPUs**, you can also submit the demo as a SLURM job:
+For **much faster runtime on CPUs (2 minutes)**, you can also submit the demo as a SLURM job:
 ```bash
 sbatch demo.slurm
 ```
@@ -77,6 +77,7 @@ outputs/demo/mahi_gene_essentiality_eval/
 ## Mahi: End-to-end
 Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN). Please download the tissue-specific functional network before running Mahi.
 ### **Generate Mahi embeddings**
+#### **Single tissue**
 ```bash
 python wt_mahi.py \
   --dir data \
@@ -84,7 +85,32 @@ python wt_mahi.py \
   --checkpoint checkpoints/best-checkpoint.ckpt
 ```
 
+#### **Multiple tissues**
+```bash
+python wt_mahi.py \
+  --dir data \
+  --tissues lung heart kidney \
+  --checkpoint checkpoints/best-checkpoint.ckpt
+```
+
+#### **Multiple tissues from a file**
+`tissues.txt`
+```txt
+# tissues.txt
+lung
+heart
+colon
+```
+
+```bash
+python wt_mahi.py \
+  --dir data \
+  --tissues_txt tissues.txt \
+  --checkpoint checkpoints/best-checkpoint.ckpt
+```
+
 ### **Perturbation (gene KO) analysis**
+You can specify a single tissue (`--tissue`), multiple tissues (`--tissues`), or provide a tissue list file (`--tissues_txt`).
 ```bash
 python perturb_mahi.py \
   --dir data \
@@ -104,7 +130,6 @@ python get_top_genes.py \
 ```
 
 ## To-Do
-- [ ] Allow processing for multiple tissues at once (WT Mahi & perturb Mahi)
 - [ ] Add code to generate baseline averages across 200 random global perturbations
-- [ ] Add more information about how to run each Mahi step individually for more control
+- [ ] Add a network in resources, and add demo for getting mahi embeddings (for lung)
 
