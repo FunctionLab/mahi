@@ -120,12 +120,13 @@ python perturb_mahi.py \
 ```
 
 ### **Rank perturbation effects**
+You can specify a single tissue (`--tissue`), multiple tissues (`--tissues`), or provide a tissue list file (`--tissues_txt`).
 ```bash
 python get_top_genes.py \
-  --wt data/mahi_embeddings/<tissue>.pkl \
-  --ko data/<Entrez ID>/mahi_embeddings/<tissue>.pkl \
+  --dir data \
+  --gene <Entrez ID> \
+  --tissue lung \
   --avg resources/averaged_distances.csv \
-  --out data/<Entrez ID>/top_genes_fc.csv \
   --top 1000
 ```
 
