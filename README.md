@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="mahi_cover.png" alt="MAHI Logo" width="250"/>
+  <img src="mahi_cover.png" alt="MAHI Logo" width="700"/>
 </p>
 
 **Mahi** is a deep learning framework integrating chromatin features and protein structure with tissue-specific networks for context-dependent gene representation.
