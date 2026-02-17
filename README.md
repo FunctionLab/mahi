@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-Multi-modal tissue-aware graph neural network for in silico genetic discovery
+Multi-modal tissue-aware graph neural network for <em>in silico</em> genetic discovery
 </h1>
 
 <p align="center">
@@ -141,5 +141,16 @@ python get_top_genes.py \
 ```
 
 ## Citation
-If you use Mahi in your research, please cite:
+If you use **Mahi** in your research, please cite:
+
+```bibtex
+@article{aggarwal2026mahi,
+  title   = {Multi-modal tissue-aware graph neural network for in silico genetic discovery},
+  author  = {Aggarwal, Anusha and Sokolova, Ksenia and Troyanskaya, Olga G},
+  journal = {bioRxiv},
+  year    = {2026},
+  month   = jan,
+  doi     = {10.XXXX/XXXXXX},
+  url     = {https://www.biorxiv.org/content/XX.XXXX/XXXXXXv1},
+}
 
