@@ -6,6 +6,14 @@
 Multi-modal tissue-aware graph neural network for in silico genetic discovery
 </h1>
 
+<p align="center">
+  📄 <a href="https://arxiv.org/abs/XXXX.XXXXX">Preprint</a> •
+  ⚙️ <a href="#installation">Installation</a> •
+  🧪 <a href="#demo-gene-essentiality-prediction">Demo</a> •
+  🧬 <a href="#mahi-end-to-end">End-to-End Embeddings</a> •
+  🧫 <a href="#perturbation-gene-ko-analysis">Perturbation Analysis</a>
+</p>
+
 ---
 ## Installation
 
