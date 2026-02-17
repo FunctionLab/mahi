@@ -75,7 +75,7 @@ outputs/demo/mahi_gene_essentiality_eval/
 ```
 
 ## Mahi: End-to-end
-Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN). Please download the tissue-specific functional network from HumanBase (https://hb.flatironinstitute.org) before running Mahi.
+Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN). Please download the functional networks using the links from the manuscript before running Mahi.
 ### **Generate Mahi embeddings**
 #### **Single tissue**
 ```bash
@@ -129,8 +129,4 @@ python get_top_genes.py \
   --avg resources/averaged_distances.csv \
   --top 1000
 ```
-
-## To-Do
-- [ ] Add code to generate baseline averages across 200 random global perturbations
-- [ ] Add a network in data
 
