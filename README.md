@@ -2,7 +2,9 @@
   <img src="mahi_cover.png" alt="MAHI Logo" width="700"/>
 </p>
 
-**Mahi** is a deep learning framework integrating chromatin features and protein structure with tissue-specific networks for context-dependent gene representation.
+<h1 align="center">
+Multi-modal tissue-aware graph neural network for in silico genetic discovery
+</h1>
 
 ---
 ## Installation
