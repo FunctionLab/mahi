@@ -149,7 +149,7 @@ If you use **Mahi** in your research, please cite:
   author  = {Aggarwal, Anusha and Sokolova, Ksenia and Troyanskaya, Olga G},
   journal = {bioRxiv},
   year    = {2026},
-  month   = jan,
+  month   = feb,
   doi     = {10.XXXX/XXXXXX},
   url     = {https://www.biorxiv.org/content/XX.XXXX/XXXXXXv1},
 }
