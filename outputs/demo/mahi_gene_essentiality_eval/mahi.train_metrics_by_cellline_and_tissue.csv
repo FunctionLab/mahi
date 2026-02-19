@@ -1,2 +1,0 @@
-tissue,file,cell_line,label_index,n,pos,neg,roc_mean,roc_std,pr_mean,pr_std
-lung,lung.train.with_labels.pkl,ACH-000012,6,14217,1663,12554,0.921163,0.007767,0.662486,0.028055
