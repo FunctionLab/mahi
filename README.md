@@ -93,12 +93,17 @@ Please download the functional networks using the links from the manuscript and 
 ./sleipnir/build/tools/Dat2Dab -i data/dab_networks/<data.dab> -o data/dat_networks/<data.dat>
 ```
 
-After conversion, filter networks to the top 3% of edges:
+After conversion, filter networks to the top 3% of edges (recommended on SLURM:
 ```bash
 sbatch scripts/process_networks.slurm
 ```
 
-This generated filtered networks in:
+If you do not have SLURM, you can run the same script locally:
+```bash
+bash scripts/process_networks.slurm
+```
+
+This generates filtered networks in:
 ```bash
 data/dat_networks/*_filtered_top3.dat
 ```
