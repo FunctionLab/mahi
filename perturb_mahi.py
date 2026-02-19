@@ -89,7 +89,7 @@ def main():
             f"python scripts/mahi/4_generate_mahi.py "
             f"--perturb_gene {GENE} "
             f"--embeddings {DIR}/{GENE}/esm_deepsea_graph_perturb.pkl "
-            f"--graph_dir {DIR}/networks "
+            f"--graph_dir {DIR}/dat_networks "
             f"--tissues_list resources/all_mage_tissues.txt "
             f"--tissue {tissue} "
             f"--overwrite "

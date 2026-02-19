@@ -49,25 +49,31 @@ pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+c
 pip install "transformers[torch]"
 ```
 
-## Demo: gene essentiality prediction
-Please start by downloading the data from the following link & unzip the data: https://drive.google.com/drive/folders/1xWfPkC8bs3aQCsI6YMqYpXnSn6f6E1-B?usp=share_link
+## Data
+Download required datasets from:
+
+https://drive.google.com/drive/folders/1xWfPkC8bs3aQCsI6YMqYpXnSn6f6E1-B?usp=share_link
+
+Then unzip into the repository root:
+
 ```bash
 unzip <data>.zip
 ```
 
+## Demo: gene essentiality prediction
 This demo runs gene essentiality prediction on **one cell line** to verify your set up (takes 15-20 minutes depending on your setup):
 ```bash
 # attach gene essentiality labels to Mahi demo embeddings for lung tissue
 python scripts/gene_essentiality/add_labels.py \
-  --mahi_root data/demo/mahi_embeddings \
+  --mahi_root data/demo/mahi_embeddings_lung \
   --data_dir data
 
 # evaluate gene essentiality (5-fold CV + test eval)
 python scripts/gene_essentiality/evaluate_mahi_gene_essentiality.py \
   --out_dir outputs/demo \
-  --mahi_root data/demo/mahi_embeddings \
+  --mahi_root data/demo/mahi_embeddings_lung \
   --mapping_file resources/cell_lines.txt \
-  --cell_line ACH-000012                         # comment out this flag to run on all 1,183 cell lines
+  --cell_line ACH-000012 # cell line associated with lung tissue
 ```
 
 ### Optional (HPC/SLURM)
@@ -93,14 +99,14 @@ Please download the functional networks using the links from the manuscript and 
 ./sleipnir/build/tools/Dat2Dab -i data/dab_networks/<data.dab> -o data/dat_networks/<data.dat>
 ```
 
-After conversion, filter networks to the top 3% of edges (recommended on SLURM:
+After conversion, filter networks to the top 3% of edges (recommended on SLURM):
 ```bash
-sbatch scripts/process_networks.slurm
+sbatch scripts/networks/process_networks.slurm
 ```
 
 If you do not have SLURM, you can run the same script locally:
 ```bash
-bash scripts/process_networks.slurm
+bash scripts/networks/process_networks.slurm
 ```
 
 This generates filtered networks in:
