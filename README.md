@@ -9,6 +9,7 @@ Multi-modal tissue-aware graph neural network for <em>in silico</em> genetic dis
 <p align="center">
   📄 <a href="https://arxiv.org/abs/XXXX.XXXXX">Manuscript</a> •
   🛠️ <a href="#installation">Installation</a> •
+  📦 <a href="#data">Data</a> •
   🧪 <a href="#demo-gene-essentiality-prediction">Demo</a> •
   🧬 <a href="#mahi-end-to-end">Embedding Generation</a> •
   🔬 <a href="#perturbation-gene-ko-analysis">Perturbation Analysis</a>
@@ -66,7 +67,7 @@ This demo runs gene essentiality prediction on **one cell line** to verify your 
 # attach gene essentiality labels to Mahi demo embeddings for lung tissue
 python scripts/gene_essentiality/add_labels.py \
   --mahi_root data/demo/mahi_embeddings_lung \
-  --data_dir data
+  --data_dir data/demo
 
 # evaluate gene essentiality (5-fold CV + test eval)
 python scripts/gene_essentiality/evaluate_mahi_gene_essentiality.py \
