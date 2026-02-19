@@ -88,21 +88,22 @@ outputs/demo/mahi_gene_essentiality_eval/
 Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN).
 ### **Generate Mahi embeddings**
 #### **Processing functional networks**
-Please download the functional networks using the links from the manuscript and convert `.dab` files to `.dat` format using  **Dat2Dab** from Sleipnir.
-Build Dat2Dab:
+Please download the functional networks using the links from the manuscript and convert `.dab` files to `.dat` format using  **Dat2Dab** from Sleipnir (https://github.com/FunctionLab/sleipnir.git).
 ```bash
-git clone https://github.com/FunctionLab/sleipnir.git
-cd sleipnir
-mkdir build && cd build
-cmake ..
-make Dat2Dab -j$(nproc)
-```
-Convert files
-```bash
-./tools/Dat2Dab -i <data.dab> -o data/<data.dat>
+./sleipnir/build/tools/Dat2Dab -i data/dab_networks/<data.dab> -o data/dat_networks/<data.dat>
 ```
 
-#### **Single tissue**
+After conversion, filter networks to the top 3% of edges:
+```bash
+sbatch scripts/process_networks.slurm
+```
+
+This generated filtered networks in:
+```bash
+data/dat_networks/*_filtered_top3.dat
+```
+
+#### **Mahi embeddings for single tissue**
 ```bash
 python wt_mahi.py \
   --dir data \
