@@ -85,8 +85,14 @@ outputs/demo/mahi_gene_essentiality_eval/
 ```
 
 ## Mahi: End-to-end
-Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN). Please download the functional networks using the links from the manuscript before running Mahi.
+Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN).
 ### **Generate Mahi embeddings**
+#### **Processing functional networks**
+Please download the functional networks using the links from the manuscript and use Dat2Dab from Sleipnir (https://github.com/FunctionLab/sleipnir) to convert the files to .dat.
+```bash
+Dat2Dab -i <data.dab> -o <data.dat>
+```
+
 #### **Single tissue**
 ```bash
 python wt_mahi.py \
@@ -150,7 +156,7 @@ If you use **Mahi** in your research, please cite:
   journal = {bioRxiv},
   year    = {2026},
   month   = feb,
-  doi     = {10.XXXX/XXXXXX},
-  url     = {https://www.biorxiv.org/content/XX.XXXX/XXXXXXv1},
+  doi     = {10.64898/2026.02.17.706433},
+  url     = {https://www.biorxiv.org/content/10.64898/2026.02.17.706433v1},
 }
 
