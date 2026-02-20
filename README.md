@@ -7,7 +7,7 @@ Multi-modal tissue-aware graph neural network for <em>in silico</em> genetic dis
 </h1>
 
 <p align="center">
-  📄 <a href="https://arxiv.org/abs/XXXX.XXXXX">Manuscript</a> •
+  📄 <a href="https://www.biorxiv.org/content/10.64898/2026.02.17.706433v1">Manuscript</a> •
   🛠️ <a href="#installation">Installation</a> •
   📦 <a href="#data">Data</a> •
   🧪 <a href="#demo-gene-essentiality-prediction">Demo</a> •
