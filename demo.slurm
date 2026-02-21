@@ -2,7 +2,7 @@
 #SBATCH --job-name=demo         # create a short name for your job
 #SBATCH --output=slurm-%A.out  # stdout file
 #SBATCH --nodes=1                 # request one node
-#SBATCH --time=5:00         # set the maximum runtime
+#SBATCH --time=1:00:00         # set the maximum runtime
 #SBATCH --mem=512G                 # request memory (adjust as needed)
 
 conda activate mahi

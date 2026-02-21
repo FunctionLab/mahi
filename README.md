@@ -62,7 +62,7 @@ unzip <data>.zip
 ```
 
 ## Demo: gene essentiality prediction
-This demo runs gene essentiality prediction on **one cell line** to verify your set up (takes 15-20 minutes depending on your setup):
+This demo runs gene essentiality prediction on **one cell line** to verify your set up (takes ~30 minutes depending on your setup):
 ```bash
 # attach gene essentiality labels to Mahi demo embeddings for lung tissue
 python scripts/gene_essentiality/add_labels.py \
@@ -78,7 +78,7 @@ python scripts/gene_essentiality/evaluate_mahi_gene_essentiality.py \
 ```
 
 ### Optional (HPC/SLURM)
-For **much faster runtime on CPUs (2 minutes)**, you can also submit the demo as a SLURM job:
+For **much faster runtime on CPUs**, you can also submit the demo as a SLURM job:
 ```bash
 sbatch demo.slurm
 ```
