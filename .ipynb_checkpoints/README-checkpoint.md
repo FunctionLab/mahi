@@ -17,7 +17,8 @@ Multi-modal tissue-aware graph neural network for <em>in silico</em> genetic dis
 
 ---
 ## Installation
-Please clone the Mahi GitHub repo in a folder with lots of storage space. Each functional network is ~22G.
+Please clone this repository into a directory with sufficient storage space.
+Each functional network is approximately **22 GB**, so ensure you have adequate disk capacity before downloading.
 
 ### **Recommended Installation (using 'environment.yaml')**
 ```bash
