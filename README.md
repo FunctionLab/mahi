@@ -17,6 +17,7 @@ Multi-modal tissue-aware graph neural network for <em>in silico</em> genetic dis
 
 ---
 ## Installation
+Please clone the Mahi GitHub repo in a folder with lots of storage space. Each functional network is ~22G.
 
 ### **Recommended Installation (using 'environment.yaml')**
 ```bash
@@ -100,7 +101,7 @@ Please download the functional networks using the links from the manuscript and 
 ./sleipnir/build/tools/Dat2Dab -i data/dab_networks/<data.dab> -o data/dat_networks/<data.dat>
 ```
 
-After conversion, filter networks to the top 3% of edges (recommended on SLURM):
+After conversion, filter networks to the top 3% of edges (recommended on SLURM). Please make sure the download `.dat` networks are in `data/dat_networks`.
 ```bash
 sbatch scripts/networks/process_networks.slurm
 ```
