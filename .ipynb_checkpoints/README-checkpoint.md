@@ -102,7 +102,7 @@ Please download the functional networks using the links from the manuscript and 
 ./sleipnir/build/tools/Dat2Dab -i data/dab_networks/<data.dab> -o data/dat_networks/<data.dat>
 ```
 
-After conversion, filter networks to the top 3% of edges (recommended on SLURM). Please make sure the downloaded `.dat` networks are in `data/dat_networks`.
+After conversion, filter networks to the top 3% of edges (recommended on SLURM). Please make sure the downloaded `.dat` networks are in `data/dat_networks`. It takes approximately 15 minutes to process 1 network.
 ```bash
 sbatch scripts/networks/process_networks.slurm
 ```
