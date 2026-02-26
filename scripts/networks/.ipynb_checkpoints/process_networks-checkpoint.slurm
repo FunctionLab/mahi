@@ -5,7 +5,7 @@
 #SBATCH --time=1-12:00         # set the maximum runtime (1 day)
 #SBATCH --mem=64G                 # request 16GB of memory (adjust as needed)
 
-ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+ROOT_DIR="$( pwd )"
 
 TOP_PCT=3.0
 DAT_DIR="$ROOT_DIR/data/dat_networks"
