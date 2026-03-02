@@ -162,7 +162,7 @@ def main(args):
         assert out.shape == (N, x_cpu.shape[1]), f"unexpected shape {out.shape}"
         save_embedding_dict(keys, out, out_path)
 
-    print("[done] all tissues complete", flush=True)
+    print(f"[done] {tissue} complete", flush=True)
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Generate Mahi embeddings with optional KO.")
