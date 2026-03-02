@@ -47,9 +47,6 @@ conda install scikit-learn matplotlib pandas -c conda-forge
 
 # install PyTorch Geometric dependencies
 pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
-
-# install transformers package
-pip install "transformers[torch]"
 ```
 
 ## Data
