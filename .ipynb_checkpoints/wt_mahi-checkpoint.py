@@ -62,8 +62,8 @@ def main():
     # 2. combine embeddings
     run_cmd(
         f"python scripts/mahi/3_combine_embeddings.py "
-        f"--esm_embeddings_path {DIR}/esm-c_mean_embeddings.pkl "
-        f"--deepsea_embeddings_path {DIR}/beluga_embeddings_single_exp.pkl "
+        f"--esm_embeddings_path {DIR}/esm-c_embeddings.pkl "
+        f"--deepsea_embeddings_path {DIR}/deepsea_embeddings\\.pkl "
         f"--graph_embeddings_path {DIR}/multigraph_wt.pkl "
         f"--output_embeddings_path {DIR}/esm_deepsea_graph_wt.pkl "
         f"--which_embeddings esm deepsea graph"

@@ -76,8 +76,8 @@ def main():
     # 3. combine embeddings
     run_cmd(
         f"python scripts/mahi/3_combine_embeddings.py "
-        f"--esm_embeddings_path {DIR}/esm-c_mean_embeddings.pkl "
-        f"--deepsea_embeddings_path {DIR}/beluga_embeddings_single_exp.pkl "
+        f"--esm_embeddings_path {DIR}/esm-c_embeddings.pkl "
+        f"--deepsea_embeddings_path {DIR}/deepsea_embeddings.pkl "
         f"--graph_embeddings_path {DIR}/{GENE}/multigraph_perturb.pkl "
         f"--output_embeddings_path {DIR}/{GENE}/esm_deepsea_graph_perturb.pkl "
         f"--which_embeddings esm deepsea graph"
@@ -89,7 +89,7 @@ def main():
             f"python scripts/mahi/4_generate_mahi.py "
             f"--perturb_gene {GENE} "
             f"--embeddings {DIR}/{GENE}/esm_deepsea_graph_perturb.pkl "
-            f"--graph_dir {DIR}/networks "
+            f"--graph_dir {DIR}/dat_networks "
             f"--tissues_list resources/all_mage_tissues.txt "
             f"--tissue {tissue} "
             f"--overwrite "
