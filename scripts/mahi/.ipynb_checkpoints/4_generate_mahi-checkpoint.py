@@ -148,7 +148,7 @@ def main(args):
     
         print(f"[run] {tissue}: loading {graph_path}", flush=True)
         _, edge_index_cpu, edge_weight_cpu = load_edges(graph_path, key2row, perturb_key=perturb_key)
-        print(f"[info] {tissue}: {edge_index_cpu.shape[1]} directed edges", flush=True)
+        print(f"[info] {tissue}: {edge_index_cpu.shape[1]} edges", flush=True)
     
         # normalize graph
         ei_norm_cpu, ew_norm_cpu = build_norm_graph(edge_index_cpu, edge_weight_cpu, N)
