@@ -85,7 +85,13 @@ def compute_top_genes_for_tissue(wt_pkl: Path, ko_pkl: Path, avg_df: pd.DataFram
 
     out_csv.parent.mkdir(parents=True, exist_ok=True)
     out_df.to_csv(out_csv, index=False)
-    print(f"Saved top {topn} genes to {out_csv}", flush=True)
+    print(f"Saved top {topn} genes to: {out_csv}", flush=True)
+    print(
+        f"You can now run pathway enrichment on the top gene set in:\n"
+        f"  {out_csv}\n"
+        f"(Use the 'gene' column as input to your enrichment tool.)",
+        flush=True,
+    )
 
 def main():
     p = argparse.ArgumentParser(
