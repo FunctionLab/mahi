@@ -94,7 +94,7 @@ outputs/demo/mahi_gene_essentiality_eval/
 Mahi can be run entirely on CPU (unless you are re-training the multigraph GNN).
 ### **Generate Mahi embeddings**
 #### **Processing functional networks**
-Please download the functional networks using the links from the manuscript and convert `.dab` files to `.dat` format using  **Dat2Dab** from Sleipnir (https://github.com/FunctionLab/sleipnir.git).
+Please download the functional networks from https://humanbase.io/download or using the links from the manuscript. If you are using links from the manuscript, please convert the `.dab` files to `.dat` format using  **Dat2Dab** from Sleipnir (https://github.com/FunctionLab/sleipnir.git). If you download directly from HumanBase, no conversion is necessary.
 ```bash
 ./sleipnir/build/tools/Dat2Dab -i data/dab_networks/<data.dab> -o data/dat_networks/<data.dat>
 ```
