@@ -58,7 +58,7 @@ def resolve_tissues(tissue: str | None, tissues: list[str] | None, tissues_txt: 
 
     raise ValueError("Provide --tissue, --tissues, or --tissues_txt.")
 
-def compute_top_genes_for_tissue(wt_pkl: Path, ko_pkl: Path, avg_df: pd.DataFrame, out_csv: Path, top: int):
+def compute_top_genes_for_tissue(wt_pkl, ko_pkl, avg_df, out_csv, top, perturb_gene):
     wt = load_pickle(wt_pkl)
     ko = load_pickle(ko_pkl)
 
@@ -76,6 +76,8 @@ def compute_top_genes_for_tissue(wt_pkl: Path, ko_pkl: Path, avg_df: pd.DataFram
     df = pd.DataFrame(rows, columns=["gene", "distance"]).sort_values(
         "distance", ascending=False, kind="mergesort"
     )
+
+    df = df[df["gene"].astype(str) != str(perturb_gene)]
 
     ranked = fold_change_rank(df, avg_df)
 
@@ -139,7 +141,7 @@ def main():
         if not ko_pkl.exists():
             raise SystemExit(f"Missing KO pickle for tissue '{tissue}': {ko_pkl}")
 
-        compute_top_genes_for_tissue(wt_pkl, ko_pkl, avg_df, out_csv, args.top)
+        compute_top_genes_for_tissue(wt_pkl, ko_pkl, avg_df, out_csv, args.top, GENE)
 
 if __name__ == "__main__":
     main()
