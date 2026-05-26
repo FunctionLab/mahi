@@ -10,6 +10,7 @@ Multi-modal tissue-aware graph neural network for <em>in silico</em> genetic dis
   📄 <a href="https://www.biorxiv.org/content/10.64898/2026.02.17.706433v1">Manuscript</a> •
   🛠️ <a href="#installation">Installation</a> •
   📦 <a href="#data">Data</a> •
+  🧬 <a href="#precomputed-mahi-gene-embeddings">Embeddings</a> •
   🧪 <a href="#demo-gene-essentiality-prediction">Demo</a> •
   🧬 <a href="#mahi-end-to-end">Embedding Generation</a> •
   🔬 <a href="#perturbation-gene-ko-analysis">Perturbation Analysis</a>
@@ -59,6 +60,10 @@ Then unzip into the repository root:
 ```bash
 unzip <data>.zip
 ```
+
+### Precomputed Mahi gene embeddings
+Precomputed **Mahi gene embeddings** are available on Hugging Face 🤗 for downstream use!
+https://huggingface.co/datasets/anushaggs/Mahi_gene_embeddings
 
 ## Demo: gene essentiality prediction
 This demo runs gene essentiality prediction on **one cell line** to verify your set up (takes ~30 minutes depending on your setup):
